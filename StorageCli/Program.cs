@@ -39,6 +39,7 @@ if(connectionString != null && filePath != null)
         };
 
         await blobClient.UploadAsync(fileStream.OpenRead(), progressHandler: progressHandler, accessTier: AccessTier.Cool);
+        Console.WriteLine("File Uploaded Successfuly");
 
     }
     else
@@ -48,5 +49,3 @@ else
 {
     Console.WriteLine("Invalid Flags. Check values for --connectionString, --filePath, --container");
 }
-
-Console.WriteLine("File Uploaded Successfuly");
